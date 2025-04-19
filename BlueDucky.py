@@ -105,7 +105,7 @@ class Adapter:
         try:
             # Command to enable SSP - the actual command might differ
             # This is a placeholder command and should be replaced with the actual one.
-            ssp_command = ["sudo", "hciconfig", self.iface, "sspmode", "1"]
+            ssp_command = ["sudo", "hciconfig", self.iface, "sspmode"]
             ssp_result = run(ssp_command)
             if ssp_result.returncode != 0:
                 log.error(f"Failed to enable SSP: {ssp_result.stderr}")
